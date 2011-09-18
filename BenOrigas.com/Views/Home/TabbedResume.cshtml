@@ -1,0 +1,216 @@
+﻿@using BenOrigas.com.Models
+@model BenOrigas.com.Models.Profile
+@{
+    ViewBag.Title = "Ben Origas' Resume";
+}
+<script type="text/javascript">
+    $(function () {
+        $(function () {
+            $("#tabs").tabs({
+                cookie: {
+                    expires: 30
+                }
+            });
+        });
+    });
+
+</script>
+<div>
+    <div id="tabs">
+        <ul>
+            @foreach (var category in Model.ExperienceCategories)
+            {
+                <li><a href="#@category.CategoryName.ToCssString()">@category.CategoryName</a></li>
+@*<li><a href="#education">Education</a></li>
+                <li><a href="#work-experience">Work Experience</a></li>
+                <li><a href="#volunteer-experience">Volunteer Experience</a></li>
+                <li><a href="#technologies">Technologies</a></li>
+                <li><a href="#leadership">Leadership</a></li>
+                <li><a href="#awards">Awards</a></li>
+                <li><a href="#contact">Contact</a></li>*@
+            }
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        @foreach (var category in Model.ExperienceCategories)
+        { 
+            <div id="@category.CategoryName.ToCssString()">
+                @foreach (var experience in category.Experiences)
+                {
+                    <div>
+                        @experience.Title
+                        <span class="date">@experience.DateRange</span>
+                        @foreach (var company in experience.Details)
+                        {
+                            <br />
+                            string companyHtml = string.Empty;
+                            if (company.Website != null && company.Website.Length > 0)
+                            {
+                                companyHtml += string.Format("<a href=\"{0}\">{1}</a>", company.Website, company.Name);
+                            }
+                            else { 
+                                companyHtml += @company.Name;
+                            }
+                            if (company.Location != null && company.Location.Length > 0) {
+                                companyHtml += string.Format(", {0}", company.Location);
+                            }
+                            @MvcHtmlString.Create(companyHtml);
+                        }
+                        @if (experience.Bullets != null && experience.Bullets.Count > 0)
+                        {
+                            <ul class="disc">
+                                @foreach (var bullet in experience.Bullets)
+                                {
+                                    <li>@bullet.Bullet</li>
+                                   if (bullet.SubBullets != null && bullet.SubBullets.Count > 0)
+                                   {
+                                    <ul class="circle">
+                                        @foreach (var subBullet in bullet.SubBullets)
+                                        { 
+                                            <li>@subBullet</li>
+                                        }
+                                    </ul>
+                                   }
+                                }
+                            </ul>
+                        }
+                    </div>
+                }
+            </div>
+        }
+        <div id="contact">
+            @Model.Name<br />
+            @Model.Address<br />
+            @Model.City, @Model.State, @Model.Zip<br />
+            @Model.Phone<br />
+            <a href="mailto:@Model.Email">@Model.Email</a><br />
+            <a href="@Model.Website">@Model.Website</a>
+        </div>
+        @*<br />
+        <br />
+        <br />
+        <br />
+        <hr />
+        <div id="education">
+            @*<div class="ui-accordion ui-widget ui-helper-reset">
+                <h3>
+                    <a href="#">Bachelor of Science<span class="date">Expected Dec 2012</span>
+                        <br />
+                        University of Nebraska - Lincoln
+                    </a>
+                </h3>
+                <div class="accordion-content">
+                    <ul class="disk">
+                        <li>Major: Computer Engineering</li>
+                        <li>Minors: Business Administration, Math</li>
+                        <li>Cumulative GPA: 3.93</li>
+                    </ul>
+                </div>
+                <h3>
+                    <a href="#">Honors College Preparatory Diploma<span class="date">Graduated May 2008</span>
+                        <br />
+                        College View Academy, Lincoln, Nebraska
+                    </a>
+                </h3>
+                <div>
+                    <ul class="disk">
+                        <li>Cumulative GPA: 4.0</li>
+                        <li>Class Rank: 1/23</li>
+                        <li>ACT Score: 33</li>
+                    </ul>
+                </div>
+            </div>
+            <div>
+                Bachelor of Science<span class="date">Expected Dec 2012</span><br />
+                University of Nebraska - Lincoln<br />
+                Jeffery S. Raikes School of Computer Science and Management<br />
+                University of Nebraska Honors Program<br />
+                <div>
+                    <ul class="disk">
+                        <li>Major: Computer Engineering</li>
+                        <li>Minors: Business Administration, Math</li>
+                        <li>Cumulative GPA: 3.93</li>
+                    </ul>
+                </div>
+            </div>
+            <br />
+            <div>
+                Honors College Preparatory Diploma<span class="date">Graduated May 2008</span><br />
+                College View Academy, Lincoln, Nebraska
+                <div>
+                    <ul class="disk">
+                        <li>Cumulative GPA: 4.0</li>
+                        <li>Class Rank: 1/23</li>
+                        <li>ACT Score: 33</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div id="work-experience">
+            <div>
+                <b>Lead Developer, Intern</b><span class="date">May 2011 - August 2011</span><br />
+                Don’t Panic Labs, Lincoln, Nebraska<br />
+                <ul class="disc">
+                    <li>Led six-person development team<br />
+                    </li>
+                    <li>Architected multi-tiered application utilizing C#, WCF, MVC3, and Entity Framework</li>
+                </ul>
+            </div>
+            <br />
+            <div>
+                <b>Enterprise Engineering Intern</b><span class="date">May 2010 - August 2010</span><br />
+                Mutual of Omaha, Omaha, Nebraska
+                <ul class="disc">
+                    <li>Designed and implemented software for internal and external use</li>
+                    <li>Served as Technical Lead on Grails project</li>
+                    <li>Languages and Frameworks Used:
+                        <ul class="circle">
+                            <li>Grails, C#, Java, VB.NET, and PHP</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <br />
+            <div>
+                <b>Web Application Intern</b><span class="date">Apr 2009 - Aug 2009</span><br />
+                CoderCraft, Lincoln, Nebraska<br />
+                <ul class="disc">
+                    <li>Developed web applications using C#, ASP.NET, and SQL Server</li>
+                    <li>Created custom reports using Crystal Reports and Microsoft Reports</li>
+                </ul>
+            </div>
+            <div class="ui-accordion ui-widget ui-helper-reset">
+                <h3>
+                    <a href="#">Lead Developer, Intern<span class="date">May 2011 - August 2011</span></a>
+                </h3>
+                <div class="accordion-content">
+                    Don’t Panic Labs, Lincoln, Nebraska<br />
+                    Led six-person development team<br />
+                    Architected multi-tiered application utilizing C#, WCF, MVC3, and Entity Framework
+                </div>
+                <h3>
+                    <a href="#">Enterprise Engineering Intern<span class="date">May 2010 - August 2010</span></a>
+                </h3>
+                <div>
+                    Designed and implemented software for internal and external use in Grails, C#, Java,
+                    VB.NET, and PHP<br />
+                    Served as Technical Lead on Grails project
+                </div>
+            </div>
+        </div>
+        <div id="volunteer-experience">
+        </div>
+        <div id="technologies">
+        </div>
+        <div id="leadership">
+        </div>
+        <div id="awards">
+        </div>
+        <div id="contact">
+            4320 Spencer Lane<br />
+            Roca, NE 68430<br />
+            (402) 405-3558<br />
+            <a href="mailto:ben@benorigas.com">ben@benorigas.com</a><br />
+            <a href="http://www.benorigas.com">benorigas.com</a>
+        </div>*@
+    </div>
+</div>
