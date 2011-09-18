@@ -24,7 +24,7 @@
 <div>
     <div id="tabs">
         <div id="contact">
-            @Model.Name<br />
+            <h2>@Model.Name</h2>
             @Model.Address<br />
             @Model.City, @Model.State, @Model.Zip<br />
             @Model.Phone<br />
@@ -35,7 +35,7 @@
         { 
             <div id="categories">
                 <div id="@category.CategoryName.ToCssString()" class="category">
-                    <hr />
+                    <br />
                     <h2><a href="#">@category.CategoryName</a></h2>
                     <hr />
                 </div>
@@ -43,11 +43,10 @@
                     @foreach (var experience in category.Experiences)
                     {
                         <div>
-                            @experience.Title
+                            <h5>@experience.Title</h5>
                             <span class="date">@experience.DateRange</span>
                             @foreach (var company in experience.Details)
                             {
-                                <br />
                                 string companyHtml = string.Empty;
                                 if (company.Website != null && company.Website.Length > 0)
                                 {
@@ -62,6 +61,7 @@
                                     companyHtml += string.Format(", {0}", company.Location);
                                 }
                                 @MvcHtmlString.Create(companyHtml);
+                                <br />
                             }
                             @if (experience.Bullets != null && experience.Bullets.Count > 0)
                             {
