@@ -1,8 +1,13 @@
 ﻿/*----------------------------------------------------------
-The base color for this template is #555555. If you'd like
+The base color for this template is #444444. If you'd like
 to use a different color start by replacing all instances of
-#555555 with your new color.
+#444444 with your new color.
 ----------------------------------------------------------*/
+
+div#contact
+{
+    text-align: center;
+}
 
 span.date
 {
@@ -33,7 +38,7 @@ h2 > a:link, h2 > a:visited, h2 > a:hover
 
 body
 {
-    background-color: #555555;
+    background-color: #444444;
     font-size: .85em;
     font-family: "Trebuchet MS" , Verdana, Helvetica, Sans-Serif;
     margin: 0;
@@ -109,6 +114,7 @@ page width. Or, you can specify an exact pixel width. */
 .page
 {
     width: 90%;
+    max-width: 1000px;
     margin-left: auto;
     margin-right: auto;
 }
@@ -159,7 +165,7 @@ footer, #footer
 ----------------------------------------------------------*/
 ul#menu
 {
-    border-bottom: 1px #555555 solid;
+    border-bottom: 1px #444444 solid;
     padding: 0 0 2px;
     position: relative;
     margin: 0;
