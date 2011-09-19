@@ -7,16 +7,17 @@ using BenOrigas.com.Models;
 
 namespace BenOrigas.com.Controllers
 {
-    public class HomeController : Controller
+    public class ResumeController : Controller
     {
+        //
+        // GET: /Resume/
+
         public ActionResult Index()
         {
-            return RedirectToAction("Index", "Resume");
+            Profile profile = HelperMethods.Deserialize<Profile>(HttpContext.Server.MapPath("~/App_Data/MyProfile.xml"));
+
+            return View(profile);
         }
 
-        //public ActionResult About()
-        //{
-        //    return View();
-        //}
     }
 }
