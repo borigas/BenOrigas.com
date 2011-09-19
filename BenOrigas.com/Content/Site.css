@@ -1,7 +1,7 @@
 ﻿/*----------------------------------------------------------
-The base color for this template is #444444. If you'd like
+The base color for this template is #555555. If you'd like
 to use a different color start by replacing all instances of
-#444444 with your new color.
+#555555 with your new color.
 ----------------------------------------------------------*/
 
 span.date
@@ -33,35 +33,25 @@ h2 > a:link, h2 > a:visited, h2 > a:hover
 
 body
 {
-    background-color: #444444;
+    background-color: #555555;
     font-size: .85em;
     font-family: "Trebuchet MS" , Verdana, Helvetica, Sans-Serif;
     margin: 0;
     padding: 0;
-    /*color: #696969;*/
     color: #000000;
 }
 
+a
+{
+    color: #000000;
+}
 a:link
 {
-    color: #034af3;
     text-decoration: underline;
 }
-
-a:visited
-{
-    color: #505abc;
-}
-
 a:hover
 {
-    color: #1d60ff;
     text-decoration: none;
-}
-
-a:active
-{
-    color: #12eb87;
 }
 
 p, ul
@@ -147,9 +137,8 @@ header h1, #header h1
 {
     padding: 30px 30px 15px 30px;
     background-color: #fff;
-    border-radius: 4px 0 0 0;
-    -webkit-border-radius: 4px 0 0 0;
-    -moz-border-radius: 4px 0 0 0;
+    border-radius: 4px;
+    box-shadow: 10px 10px 25px 5px #111;
 }
 
 footer, #footer
@@ -170,7 +159,7 @@ footer, #footer
 ----------------------------------------------------------*/
 ul#menu
 {
-    border-bottom: 1px #444444 solid;
+    border-bottom: 1px #555555 solid;
     padding: 0 0 2px;
     position: relative;
     margin: 0;
