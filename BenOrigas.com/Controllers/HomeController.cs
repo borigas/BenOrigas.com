@@ -13,25 +13,12 @@ namespace BenOrigas.com.Controllers
         {
             Profile profile = HelperMethods.Deserialize<Profile>(HttpContext.Server.MapPath("~/App_Data/MyProfile.xml"));
 
-            //return View("TabbedResume", profile);
-            return View("AccordionResume", profile);
+            return View("Resume", profile);
         }
 
-        public ActionResult About()
-        {
-            return View();
-        }
-
-        public ActionResult TabbedResume()
-        {
-            Profile profile = HelperMethods.Deserialize<Profile>(HttpContext.Server.MapPath("~/App_Data/MyProfile.xml"));
-            return View(profile);
-        }
-
-        public ActionResult AccordionResume()
-        {
-            Profile profile = HelperMethods.Deserialize<Profile>(HttpContext.Server.MapPath("~/App_Data/MyProfile.xml"));
-            return View(profile);
-        }
+        //public ActionResult About()
+        //{
+        //    return View();
+        //}
     }
 }

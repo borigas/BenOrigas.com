@@ -131,10 +131,7 @@
     <Content Include="Views\Web.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\Home\AccordionResume.cshtml" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Views\Home\TabbedResume.cshtml" />
+    <Content Include="Views\Home\Resume.cshtml" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
