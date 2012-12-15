@@ -19,15 +19,16 @@ namespace BenOrigas.com.Models
         {
             XmlSerializer serializer = new XmlSerializer(typeof(T));
 
-            FileStream fs = new FileStream(filename, FileMode.Open, FileAccess.Read);
-            XmlReader xmlReader = new XmlTextReader(fs);
+            using (FileStream fs = new FileStream(filename, FileMode.Open, FileAccess.Read))
+            {
+                XmlReader xmlReader = new XmlTextReader(fs);
 
-            T result = (T)serializer.Deserialize(xmlReader);
+                T result = (T)serializer.Deserialize(xmlReader);
 
-            xmlReader.Close();
-            fs.Close();
-
-            return result;
+                xmlReader.Close();
+                fs.Close();
+                return result;
+            }
         }
     }
 }

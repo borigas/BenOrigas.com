@@ -16,11 +16,21 @@
     <div id="tabs">
         <div id="contact">
             <h1>@Model.Name</h1>
-            @Model.Address<br />
-            @Model.City @Model.State @Model.Zip<br />
-            @Model.Phone<br />
-            <a href="mailto:@Model.Email">@Model.Email</a><br />
-            <a href="@Model.Website">@Model.Website</a>
+            @if(!string.IsNullOrWhiteSpace(Model.Address)){
+                @Model.Address<br />
+            }
+            @if(!string.IsNullOrWhiteSpace(@Model.City) && !string.IsNullOrWhiteSpace(@Model.State) && !string.IsNullOrWhiteSpace(@Model.Zip)){
+                @Model.City @Model.State @Model.Zip<br />
+            }
+            @if(!string.IsNullOrWhiteSpace(Model.Phone)){
+                @Model.Phone<br />
+            }
+            @if(!string.IsNullOrWhiteSpace(Model.Email)){
+                <a href="mailto:@Model.Email">@Model.Email</a><br />
+            }
+            @if(!string.IsNullOrWhiteSpace(Model.Website)){
+                <a href="@Model.Website">@Model.Website</a>
+            }
         </div>
         @foreach (var category in Model.ExperienceCategories)
         { 
@@ -73,6 +83,7 @@
                                 </ul>
                             }
                         </div>
+                        <br />
                     }
                 </div>
             </div>

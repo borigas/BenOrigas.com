@@ -1,12 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Profile>
 	<Name>Ben Origas</Name>
-	<Address>4320 Spencer Lane</Address>
-	<City>Roca</City>
-	<State>NE</State>
-	<Zip>68430</Zip>
 	<Phone>(402) 500-0820</Phone>
-	<Email>ben@benorigas.com</Email>
+	<Email>jobs@benorigas.com</Email>
 	<Website>http://www.benorigas.com</Website>
 	<ExperienceCategories>
 		<ExperienceCategory>
@@ -14,7 +10,7 @@
 			<Experiences>
 				<Experience>
 					<Title>Bachelor of Science in Computer Engineering</Title>
-					<DateRange>Expected Aug 2012</DateRange>
+					<DateRange>Graduated August 2012</DateRange>
 					<Details>
 						<Company>
 							<Name>University of Nebraska - Lincoln</Name>
@@ -40,7 +36,7 @@
 							<Bullet>Business Administration Minor</Bullet>
 						</ExperienceBullet>
 						<ExperienceBullet>
-							<Bullet>3.89 GPA</Bullet>
+							<Bullet>3.87 GPA</Bullet>
 						</ExperienceBullet>
 					</Bullets>
 				</Experience>
@@ -73,13 +69,29 @@
 			<CategoryName>Work Experience</CategoryName>
 			<Experiences>
 				<Experience>
-					<Title>Lead Developer, Intern</Title>
+					<Title>Software Engineer</Title>
+					<DateRange>May 2012 to Present</DateRange>
+					<Details>
+						<Company>
+							<Name>Nebraska Global</Name>
+							<Location>Lincoln, Nebraska</Location>
+							<Website>http://www.nebraskaglobal.com</Website>
+						</Company>
+					</Details>
+					<Bullets>
+						<ExperienceBullet>
+							<Bullet>Worked in C# 4.5, WPF, MVC 4, WCF on multiple teams</Bullet>
+						</ExperienceBullet>
+					</Bullets>
+				</Experience>
+				<Experience>
+					<Title>Software Engineering Intern</Title>
 					<DateRange>May 2011 to August 2011</DateRange>
 					<Details>
 						<Company>
-							<Name>Don't Panic Labs</Name>
+							<Name>Nebraska Global</Name>
 							<Location>Lincoln, Nebraska</Location>
-							<Website>http://www.dontpaniclabs.com</Website>
+							<Website>http://www.nebraskaglobal.com</Website>
 						</Company>
 					</Details>
 					<Bullets>
@@ -166,8 +178,19 @@
 			<CategoryName>Volunteer Experience</CategoryName>
 			<Experiences>
 				<Experience>
+					<Title>Assistant Basketball Coach</Title>
+					<DateRange>May 2012 to Present</DateRange>
+					<Details>
+						<Company>
+							<Name>College View Academy</Name>
+							<Location>Lincoln, Nebraska</Location>
+							<Website>http://collegeviewacademy.org</Website>
+						</Company>
+					</Details>
+				</Experience>
+				<Experience>
 					<Title>Vice President, Lead Developer</Title>
-					<DateRange>August 2009 to Present</DateRange>
+					<DateRange>August 2009 to May 2012</DateRange>
 					<Details>
 						<Company>
 							<Name>Esther's Crew</Name>
@@ -256,7 +279,7 @@
 							<Bullet>Entity Framework</Bullet>
 						</ExperienceBullet>
 						<ExperienceBullet>
-							<Bullet>MVC 3</Bullet>
+							<Bullet>MVC 4</Bullet>
 						</ExperienceBullet>
 						<ExperienceBullet>
 							<Bullet>IIS</Bullet>
