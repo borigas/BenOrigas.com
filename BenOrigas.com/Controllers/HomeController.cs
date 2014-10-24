@@ -11,8 +11,8 @@ namespace BenOrigas.com.Controllers
     {
         public ActionResult Index()
         {
-            return View();
-            //return RedirectToAction("Index", "Resume");
+            //return View();
+            return RedirectToAction("Index", "Resume");
         }
 
         //public ActionResult About()
