@@ -80,7 +80,7 @@
 					</Details>
 					<Bullets>
 						<ExperienceBullet>
-							<Bullet>Worked in C# 4.5, WPF, MVC 4, WCF on multiple teams</Bullet>
+							<Bullet>Worked in C#, MongoDb, WPF, ASP.NET MVC, SQL, and WCF on multiple teams</Bullet>
 						</ExperienceBullet>
 					</Bullets>
 				</Experience>
@@ -104,7 +104,7 @@
 						<ExperienceBullet>
 							<Bullet>Technologies Used:</Bullet>
 							<SubBullets>
-								<string>C#, WCF, MVC 3, Entity Framework, SQL Server, and IIS</string>
+								<string>C#, WCF, ASP.NET MVC, Entity Framework, SQL Server, and IIS</string>
 							</SubBullets>
 						</ExperienceBullet>
 					</Bullets>
@@ -153,32 +153,13 @@
 						</ExperienceBullet>
 					</Bullets>
 				</Experience>
-				<Experience>
-					<Title>Computer Lab Administrator</Title>
-					<DateRange>August 2006 to August 2008</DateRange>
-					<Details>
-						<Company>
-							<Name>College View Academy</Name>
-							<Location>Lincoln, Nebraska</Location>
-							<Website>http://collegeviewacademy.org</Website>
-						</Company>
-					</Details>
-					<Bullets>
-						<ExperienceBullet>
-							<Bullet>Maintained and upgraded network and website</Bullet>
-						</ExperienceBullet>
-						<ExperienceBullet>
-							<Bullet>Supervised and assisted students and teachers</Bullet>
-						</ExperienceBullet>
-					</Bullets>
-				</Experience>
 			</Experiences>
 		</ExperienceCategory>
 		<ExperienceCategory>
 			<CategoryName>Volunteer Experience</CategoryName>
 			<Experiences>
 				<Experience>
-					<Title>Assistant Basketball Coach</Title>
+					<Title>Assistant High School Basketball Coach</Title>
 					<DateRange>May 2012 to Present</DateRange>
 					<Details>
 						<Company>
@@ -219,6 +200,12 @@
 							<Bullet>C#</Bullet>
 						</ExperienceBullet>
 						<ExperienceBullet>
+							<Bullet>JavaScript</Bullet>
+						</ExperienceBullet>
+						<ExperienceBullet>
+							<Bullet>SQL</Bullet>
+						</ExperienceBullet>
+						<ExperienceBullet>
 							<Bullet>Java</Bullet>
 						</ExperienceBullet>
 						<ExperienceBullet>
@@ -226,12 +213,6 @@
 						</ExperienceBullet>
 						<ExperienceBullet>
 							<Bullet>Ruby on Rails</Bullet>
-						</ExperienceBullet>
-						<ExperienceBullet>
-							<Bullet>SQL</Bullet>
-						</ExperienceBullet>
-						<ExperienceBullet>
-							<Bullet>JavaScript</Bullet>
 						</ExperienceBullet>
 						<ExperienceBullet>
 							<Bullet>C++</Bullet>
@@ -272,6 +253,9 @@
 				<Experience>
 					<Title>Other Technologies</Title>
 					<Bullets>
+            <ExperienceBullet>
+              <Bullet>MongoDb</Bullet>
+            </ExperienceBullet>
 						<ExperienceBullet>
 							<Bullet>WCF</Bullet>
 						</ExperienceBullet>
@@ -279,7 +263,7 @@
 							<Bullet>Entity Framework</Bullet>
 						</ExperienceBullet>
 						<ExperienceBullet>
-							<Bullet>MVC 4</Bullet>
+							<Bullet>ASP.NET MVC</Bullet>
 						</ExperienceBullet>
 						<ExperienceBullet>
 							<Bullet>IIS</Bullet>
@@ -304,24 +288,6 @@
 						</ExperienceBullet>
 						<ExperienceBullet>
 							<Bullet>Certified in Certified in Crucial Conversations</Bullet>
-						</ExperienceBullet>
-					</Bullets>
-				</Experience>
-			</Experiences>
-		</ExperienceCategory>
-		<ExperienceCategory>
-			<CategoryName>Honors and Achievements</CategoryName>
-			<Experiences>
-				<Experience>
-					<Bullets>
-						<ExperienceBullet>
-							<Bullet>Dean's List</Bullet>
-						</ExperienceBullet>
-						<ExperienceBullet>
-							<Bullet>National Society of Collegiate Scholars Member</Bullet>
-						</ExperienceBullet>
-						<ExperienceBullet>
-							<Bullet>Phi Eta Sigma Honors Society Member</Bullet>
 						</ExperienceBullet>
 					</Bullets>
 				</Experience>
